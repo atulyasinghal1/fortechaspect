@@ -1,0 +1,60 @@
+/*
+Here I have just uploaded the front end of the code where the data is being taken 
+using the structure and then the same is being displayed here.
+Since i haven't attached the database to c++ before i don't know how to do that. 
+*/
+#include<iostream>
+#include<string.h>
+using namespace std;
+//Creating a Structure to store the data
+struct bloodbank
+{
+	char name[20];
+	int age;
+	char address[50];
+	char email[50];
+	int mobile;
+	char bloodgroup[5];
+	char sex[10];
+}s[200];
+
+//Starting the main function
+int main()
+{
+	int i,j,k,l,n,m;
+	cout<<"WELCOME TO TE BLOOD BANK"<<endl<<endl;
+	cout<<"Enter the number of donors:";
+	cin>>n;
+
+	for(i=0;i<n;i++) //Enter the data of the donors 
+	{
+	    cout<<"Enter the detail of donor"<<i<<":"<<endl;
+		cout<<"Enter name:";            
+		cin>>s[i].name;
+		cout<<"Enter age:";
+		cin>>s[i].age;
+		cout<<"Enter address:";
+		cin>>s[i].address;
+		cout<<"Enter email:";
+		cin>>s[i].email;
+		cout<<"Enter mobile:";
+		cin>>s[i].mobile;
+		cout<<"Enter bloodgroup:";
+		cin>>s[i].bloodgroup;
+		cout<<"Enter sex:";
+		cin>>s[i].sex;
+		cout<<endl;
+	}
+
+	cout<<endl;
+	//Printing the data stored in the form of Table
+	cout<<"The database stored is as follows:"<<endl;
+	cout<<"S.No."<<"\t"<<"Name"<<"\t"<<"Age"<<"\t"<<"Address"<<"\t"<<"Email"<<"\t"<<"Mobile"<<"\t"<<"Bloodgroup"<<"\t"<<"sex"<<"\t"<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<i<<"\t"<<s[i].name<<"\t"<<s[i].age<<"\t"<<s[i].address<<"\t"<<s[i].email<<"\t"<<s[i].mobile<<"\t"<<s[i].bloodgroup<<"\t"<<s[i].sex<<"\t";
+		cout<<endl;
+	}
+    cout<<"Thank You";
+	return 0;
+}
